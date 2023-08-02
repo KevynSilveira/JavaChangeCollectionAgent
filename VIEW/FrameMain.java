@@ -38,7 +38,7 @@ public class FrameMain extends javax.swing.JFrame {
         setTitle("Troca Agente Cobrador");
         setMaximumSize(new java.awt.Dimension(3000, 3000));
         setMinimumSize(new java.awt.Dimension(30, 40));
-        setPreferredSize(new java.awt.Dimension(400, 360));
+        setPreferredSize(new java.awt.Dimension(400, 365));
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -46,11 +46,6 @@ public class FrameMain extends javax.swing.JFrame {
         b_selecionar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         b_selecionar.setForeground(new java.awt.Color(255, 255, 255));
         b_selecionar.setText("Selecionar");
-        b_selecionar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b_selecionarActionPerformed(evt);
-            }
-        });
         getContentPane().add(b_selecionar);
         b_selecionar.setBounds(110, 280, 170, 30);
 
@@ -98,11 +93,6 @@ public class FrameMain extends javax.swing.JFrame {
             ex.printStackTrace();
         }
         ff_agente_cobrador.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ff_agente_cobrador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ff_agente_cobradorActionPerformed(evt);
-            }
-        });
         getContentPane().add(ff_agente_cobrador);
         ff_agente_cobrador.setBounds(180, 90, 181, 30);
 
@@ -114,11 +104,6 @@ public class FrameMain extends javax.swing.JFrame {
             ex.printStackTrace();
         }
         ff_cliente.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ff_cliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ff_clienteActionPerformed(evt);
-            }
-        });
         getContentPane().add(ff_cliente);
         ff_cliente.setBounds(180, 130, 181, 30);
 
@@ -142,11 +127,6 @@ public class FrameMain extends javax.swing.JFrame {
         cb_estabelecimento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estabelecimento", "SC", "RS" }));
         cb_estabelecimento.setToolTipText("Estabelecimento");
         cb_estabelecimento.setName("Estabelecimento"); // NOI18N
-        cb_estabelecimento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cb_estabelecimentoActionPerformed(evt);
-            }
-        });
         getContentPane().add(cb_estabelecimento);
         cb_estabelecimento.setBounds(120, 210, 170, 30);
         cb_estabelecimento.getAccessibleContext().setAccessibleName("Estabelecimento");
@@ -174,22 +154,6 @@ public class FrameMain extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void ff_agente_cobradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ff_agente_cobradorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ff_agente_cobradorActionPerformed
-
-    private void ff_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ff_clienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ff_clienteActionPerformed
-
-    private void b_selecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_selecionarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_b_selecionarActionPerformed
-
-    private void cb_estabelecimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_estabelecimentoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cb_estabelecimentoActionPerformed
 
     public static void main(String args[]) {
 
