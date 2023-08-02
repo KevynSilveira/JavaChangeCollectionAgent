@@ -1,13 +1,17 @@
 package VIEW;
-/*
-  @author Kevyn
-*/
+import VIEW.FrameConfirmacao;
+
+/*      @author Kevyn      */
+
 public class FrameMain extends javax.swing.JFrame {
+    
+    /*** INSTANCIANDO OBJETOS ***/
+    FrameConfirmacao frameConfirmacao = new FrameConfirmacao();
 
     public FrameMain() {
         initComponents();
+        
     }
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -38,7 +42,7 @@ public class FrameMain extends javax.swing.JFrame {
         setTitle("Troca Agente Cobrador");
         setMaximumSize(new java.awt.Dimension(3000, 3000));
         setMinimumSize(new java.awt.Dimension(30, 40));
-        setPreferredSize(new java.awt.Dimension(400, 365));
+        setPreferredSize(new java.awt.Dimension(400, 360));
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -46,6 +50,11 @@ public class FrameMain extends javax.swing.JFrame {
         b_selecionar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         b_selecionar.setForeground(new java.awt.Color(255, 255, 255));
         b_selecionar.setText("Selecionar");
+        b_selecionar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b_selecionarActionPerformed(evt);
+            }
+        });
         getContentPane().add(b_selecionar);
         b_selecionar.setBounds(110, 280, 170, 30);
 
@@ -154,6 +163,11 @@ public class FrameMain extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void b_selecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_selecionarActionPerformed
+        // TODO add your handling code here:
+        frameConfirmacao.setVisible(true);
+    }//GEN-LAST:event_b_selecionarActionPerformed
 
     public static void main(String args[]) {
 
