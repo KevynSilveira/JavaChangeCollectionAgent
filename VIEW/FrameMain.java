@@ -1,7 +1,8 @@
 package VIEW;
-import VIEW.FrameConfirmacao;
 
 /*      @author Kevyn      */
+
+import VIEW.FrameConfirmacao;
 
 public class FrameMain extends javax.swing.JFrame {
     

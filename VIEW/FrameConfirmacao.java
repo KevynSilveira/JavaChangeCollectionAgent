@@ -76,7 +76,6 @@ public class FrameConfirmacao extends javax.swing.JFrame {
         });
     }
 
-    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton b_confirmar;
     private javax.swing.JFormattedTextField ff_novo_agente;

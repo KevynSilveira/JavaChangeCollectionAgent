@@ -1,9 +1,9 @@
 package MODEL;
 
+/*      @author Kevyn      */
+
 import java.awt.Color;
 import javax.swing.JFrame;
-
-/*      @author Kevyn      */
 
 public class background {
     
