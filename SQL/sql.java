@@ -13,18 +13,19 @@ public class sql {
     private static final String senha = "t$gmminf";
 
     /*** FUNÇÃO PARA ACESSAR O BANCO DE DADOS ***/
-    private static Connection getConnection() {
+    private static Connection conecta() {
         try {
+            System.out.println("conectado");
             return DriverManager.getConnection(url_db, usuario, senha);
         } catch (SQLException e) {
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, e);
             return null;
         }
     }
 
     /*** FUNÇÃO PARA FAZER O SELECT NO BANCO ***/
-    public static void executeSelectQuery(String query) {
-        try (Connection conn = getConnection();
+    public static void select(String query) {
+        try (Connection conn = conecta();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(query)) {
 
@@ -40,8 +41,8 @@ public class sql {
     }
 
     /*** FUNÇÃO PARA FAZER O UPDATE BANCO ***/
-    public static void executeUpdateQuery(String query) {
-        try (Connection conn = getConnection();
+    public static void update(String query) {
+        try (Connection conn = conecta();
              Statement stmt = conn.createStatement()) {
 
             int rowsAffected = stmt.executeUpdate(query);

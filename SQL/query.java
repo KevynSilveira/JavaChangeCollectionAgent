@@ -21,7 +21,7 @@ public class query {
 
     
     /*** TRAZ A CONTAGEM DE QUANTAS COLUNAS FORAM SELECIONADAS ***/
-    private static String query_contagem = 
+    public static String query_contagem = 
         "DECLARE @cliente INT = ?;" +
         "DECLARE @filial INT = (SELECT cgc_matriz FROM CLIEN WHERE codigo = @cliente);" +
         "DECLARE @agente INT = ?;" +
@@ -44,13 +44,13 @@ public class query {
     
     
     /*** SELECIONA PARA TRANSFORMAR EM EXCEL ***/
-    private static final String query_seleciona = "DECLARE @cliente INT = ?;" +
+    public static final String query_seleciona = "DECLARE @cliente INT = 49918;" +
         "DECLARE @filial INT = (SELECT cgc_matriz FROM CLIEN WHERE codigo = @cliente);" +
-        "DECLARE @agente INT = ?;" +
-        "DECLARE @estabelecimento INT = ?;" +
-        "DECLARE @datainicio DATE = ?;" +
-        "DECLARE @datafim DATE = ?;" +
-        "DECLARE @parcela varchar = ?;" +
+        "DECLARE @agente INT = 2747;" +
+        "DECLARE @estabelecimento INT = 1;" +
+        "DECLARE @datainicio DATE = '01/07/2023';" +
+        "DECLARE @datafim DATE = '27/07/2023';" +
+        "DECLARE @parcela varchar = 'A';" +
         "SELECT TOP 800" +
         "  Cod_Documento AS Código," +
         "  Num_Documento AS Documento," +
@@ -73,7 +73,7 @@ public class query {
     
     
     /*** SELECIONA E ATUALIZA O AGENTE COBRADOR ***/
-    private static final String query_seleciona_update = "DECLARE @cliente INT = ?; " +
+    public static final String query_seleciona_update = "DECLARE @cliente INT = ?; " +
         "DECLARE @filial INT = (SELECT cgc_matriz FROM CLIEN WHERE codigo = @cliente); " +
         "DECLARE @agente INT = ?; " +
         "DECLARE @estabelecimento INT = ?; " +

@@ -3,12 +3,18 @@ package VIEW;
 /*      @author Kevyn      */
 
 import VIEW.FrameConfirmacao;
+import SQL.sql;
+import SQL.query;
 
 public class FrameMain extends javax.swing.JFrame {
     
     /*** INSTANCIANDO OBJETOS ***/
     FrameConfirmacao frameConfirmacao = new FrameConfirmacao();
-
+    sql SQL = new sql();
+    query script = new query();
+    
+    
+    /***  CONSTRUTOR  ***/
     public FrameMain() {
         initComponents();
         
@@ -166,12 +172,12 @@ public class FrameMain extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void b_selecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_selecionarActionPerformed
-        // TODO add your handling code here:
+
         frameConfirmacao.setVisible(true);
+        sql.select(script.query_seleciona);
     }//GEN-LAST:event_b_selecionarActionPerformed
 
     public static void main(String args[]) {
-
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new FrameMain().setVisible(true);
